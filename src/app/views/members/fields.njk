@@ -75,8 +75,8 @@
 <div class="item">
     <div>Instrutor</div>
         <select name="instructor">
-            {% for instructor in instructorsOptions%}
-            <option value="{{instructor.id}}" {% if menber.instructor_id == instructor.id %}select{%endif%}}>
+            {% for instructor in instructorOptions%}
+            <option value="{{instructor.id}}" {% if member.instructor_id == instructor.id %}select{%endif%}}>
                 {{instructor.name}}
             </option>
             {%endfor%}

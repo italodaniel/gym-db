@@ -70,7 +70,7 @@ module.exports = {
             blood=($6),
             weight=($7),
             height=($8),
-            instructor.id=($9)
+            instructor_id=($9)
             WHERE id = $10
         `;
 
@@ -107,7 +107,8 @@ module.exports = {
     },
 
     instructorsSelectOptions(callback){
-        db.query(`SELECT name, id FROM instructors`, function(err, results){
+        db.query(`
+        SELECT name, id FROM instructors`, function(err, results){
             if(err) throw 'Database Erro'
 
             callback(results.rows)

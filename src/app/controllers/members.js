@@ -14,7 +14,7 @@ module.exports = {
     create(req, res) {
 
         Member.instructorsSelectOptions(function(options){
-            return res.render("members/create", { instructorsOptions: options})
+            return res.render("members/create", { instructorOptions: options})
         })
 
     },
